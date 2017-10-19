@@ -1,0 +1,55 @@
+html{
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+body{
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+#error{
+    position: fixed;
+    top:50px;
+    left:10px;
+    font-family: Calibri (Sans MS);
+    font-size:14px;
+    color:red;
+}
+#warning{
+    position: fixed;
+    top:50px;
+    left:10px;
+    font-family: Calibri (Sans MS);
+    font-size:14px;
+    color:orange;
+    margin-left: 10px;
+}
+#info{
+    position: fixed;
+    top:50px;
+    left:10px;
+    font-family: Calibri (Sans MS);
+    font-size:14px;
+    color:green;
+    margin-left: 10px;
+}
+#error img,  #warning img, #info img{
+    height:14px;
+    margin-right: 5px;
+    position: relative;
+    top:2px;
+}
+.invisible{
+    display: none;
+}
+.visible{
+    display: block;
+}
+:root{
+    --yellow : rgb(245,191,5);
+    --red : rgb(153,1,26);
+    --font : "Centaur";
+}

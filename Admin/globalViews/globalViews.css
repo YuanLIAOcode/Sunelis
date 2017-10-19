@@ -1,0 +1,23 @@
+html{
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+body{
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.invisible{
+    display: none;
+}
+.visible{
+    display: block;
+}
+:root{
+    --yellow : rgb(245,191,5);
+    --red : rgb(153,1,26);
+    --font : "Centaur";
+}
