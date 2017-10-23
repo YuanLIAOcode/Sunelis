@@ -1,5 +1,5 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
-    <?php   
+    <?php
         include_once('services/session.php');
         sessionInit();
         include_once('services/includeGlobals.php');
