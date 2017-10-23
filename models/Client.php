@@ -9,6 +9,7 @@
 		private $email;
 		private $token;
 		private $rights;
+		private $companies;
 		private $interventions;
 /*
  *	Constructor
@@ -20,6 +21,7 @@
 			$this->email = "";
 			$this->token = "";
 			$this->rights = "";
+			$this->companies = "";
 			$this->interventions = array();
 		}
 
@@ -48,6 +50,10 @@
 
 		function getRights(){
 			return $this->rights;
+		}
+
+		function getCompanies(){
+			return $this->companies;
 		}
 
 		function getInterventions(){
@@ -90,6 +96,12 @@
 		function setRights($rights){
 			if(is_string($rights)){
 				$this->rights = $rights;
+			}
+		}
+
+		function setCompanies($companies){
+			if(is_string($companies)){
+				$this->companies = $companies;
 			}
 		}
 

@@ -6,7 +6,7 @@
 		private $id;
 		private $client_id;
 		private $state;
-		private $date;
+		private $idate;
 		private $name;
 		private $description;
 		private $address;
@@ -18,7 +18,7 @@
 			$this->id = 0;
 			$this->client_id = 0;
 			$this->state = "";
-			$this->date = "";
+			$this->idate = "";
 			$this->name = "";
 			$this->description = "";
 			$this->address = "";
@@ -40,8 +40,8 @@
 			return $this->state;
 		}
 
-		function getDate(){
-			return $this->date;
+		function getIdate(){
+			return $this->idate;
 		}
 
 		function getName(){
@@ -81,9 +81,9 @@
 			}
 		}
 
-		function setDate($date){
-			if(is_string($date)){
-				$this->date = $date;
+		function setIdate($idate){
+			if(is_string($idate)){
+				$this->idate = $idate;
 			}
 		}
 

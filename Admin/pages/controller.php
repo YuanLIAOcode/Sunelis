@@ -1,7 +1,7 @@
 <?php
     if(isset($_SESSION['status']) and $_SESSION['status'] == 'connected'){
-        if(file_exists('Accueil/controller.php')){
-            header('Location: '.appConf('urladminpath').'Accueil');
+        if(file_exists('Mes_documents/controller.php')){
+            header('Location: '.appConf('urladminpath').'Mes_documents');
             exit(1);
         }else{
             chdir(appConf('rootpath'));
