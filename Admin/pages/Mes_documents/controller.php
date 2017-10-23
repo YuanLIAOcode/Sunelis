@@ -4,14 +4,19 @@
         if(!isset($_SESSION['current_company'])){
             $_SESSION['current_company'] = $user->getCompanies();
         }
-        if(!isset($_GET['dir']) or !is_dir(appConf('rootpath').'globalViews/images/clients/'.$_SESSION['current_company'].'/'.$_GET['dir'])){
-            $_GET['dir'] = '';
+        $folder_root_path = appConf('rootpath').'globalViews/images/clients/'.$_SESSION['current_company'].'/';
+        if(!isset($_GET['dir'])){
+            $_SESSION['current_dir'] = '';
+        }else{
+            if(substr($_GET['dir'],strlen($_GET['dir'])-1,1) != '/' and $_GET['dir'] != ''){
+                $_GET['dir'] .= '/';
+            }
+            if(!is_dir($folder_root_path.$_GET['dir'])){
+                $_GET['dir'] = '';
+            }
+            $_SESSION['current_dir'] = $_GET['dir'];
         }
-        $folder_path = appConf('rootpath').'globalViews/images/clients/'.$_SESSION['current_company'].'/'.$_GET['dir'];
-        if($folder_path.substr(strlen($folder_path)-1,1) != '/'){
-            $folder_path .= '/';
-        }
-        $dir = scandir($folder_path);
+        $dir = scandir($folder_root_path.$_SESSION['current_dir']);
         $_SESSION['page'] = 'Mes_documents';
         if(file_exists('view/view.css')){
             echo '<style>';
