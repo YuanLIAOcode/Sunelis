@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 23 Octobre 2017 à 10:17
+-- Généré le :  Lun 23 Octobre 2017 à 10:34
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -59,7 +59,7 @@ CREATE TABLE `intervention` (
   `id` int(11) NOT NULL,
   `client_id` int(11) NOT NULL,
   `state` varchar(255) NOT NULL,
-  `date` varchar(255) NOT NULL,
+  `idate` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL
