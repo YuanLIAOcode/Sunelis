@@ -1,6 +1,6 @@
 <?php
     function appConf($config_name){
-        $filename = 'app.conf';
+        $filename = 'c:/wamp64/www/Sunelis/app.conf';
         if(is_file($filename)){
             $file = fopen($filename,'r');
             while($line = fgets($file)){
@@ -10,7 +10,7 @@
                 }
             }
         }else{
-            array_push($_SESSION['errors'],'"app.conf" does not exist');
+            array_push($_SESSION['errors'],'"c:/wamp64/www/Sunelis/app.conf" does not exist');
         }
         return null;
     }
