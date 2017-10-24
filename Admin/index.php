@@ -1,5 +1,6 @@
 <title>Admin</title>
 <?php
+    initAdminVariables();
     chdir(appConf('adminpath'));
     $url = substr($_GET['url'],6,strlen($_GET['url'])-6);
     if($url === false or $url == ''){

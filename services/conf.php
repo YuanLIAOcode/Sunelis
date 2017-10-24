@@ -18,4 +18,14 @@
     function setConfig($config_name){
         
     }
+
+    function getSeveralAppConf($conf_name){
+        $datas = array();
+        $i = 1;
+        while($data = appConf($conf_name.$i)){
+            array_push($datas,$data);
+            $i += 1;
+        }
+        return $datas;
+    }
 ?>
