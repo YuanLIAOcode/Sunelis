@@ -1,3 +1,4 @@
+<title>Connexion</title>
 <div id='connection_block'>
     <form method='post' action='<?php echo $_SERVER['REQUEST_URI'];?>'>
         <h2>Connexion</h2>

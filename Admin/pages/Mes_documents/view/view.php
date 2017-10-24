@@ -1,3 +1,4 @@
+<title>Mes Documents</title>
 <div id='mydocs_block'>
     <?php
         foreach($dir as $file){

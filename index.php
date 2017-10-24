@@ -8,7 +8,7 @@
     ?>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link rel="icon" type="image/jpg" href="<?php echo appConf('urlrootpath');?>globalViews/images/icons/logo.png">
+        <link rel="icon" type="image/jpg" href="<?php echo appConf('urlrootpath');?>globalViews/images/icons/lock.png">
 	</head>
 	<body>
         <?php

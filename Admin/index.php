@@ -1,4 +1,3 @@
-<title>Admin</title>
 <?php
     initAdminVariables();
     chdir(appConf('adminpath'));

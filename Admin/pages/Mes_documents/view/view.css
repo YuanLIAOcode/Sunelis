@@ -3,6 +3,7 @@
     min-width: 300px;
     user-select: none;
     padding: 5px;
+    margin-bottom: 100px;
 }
 #mydocs_block .folder{
     display: block;
