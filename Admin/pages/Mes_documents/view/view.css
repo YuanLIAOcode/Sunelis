@@ -2,10 +2,10 @@
     display: block;
     min-width: 300px;
     user-select: none;
+    padding: 5px;
 }
 #mydocs_block .folder{
     display: block;
-    width:100%;
     border: solid 1px black;
     text-align: left;
     padding: 10px;

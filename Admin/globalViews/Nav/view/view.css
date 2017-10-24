@@ -1,3 +1,17 @@
 #nav_block{
-    
+    width:200px;
+    position: fixed;
+    left:0;
+    top:0;
+    height: 100%;
+    z-index: 1;
+}
+#nav_block #companies{
+    border:solid 1px;
+}
+#nav_block #companies #selected_company{
+    width: 100%;
+}
+#nav_block #companies #selected_company img{
+    width: 100%;
 }
