@@ -1,13 +1,19 @@
 <title></title>
-<header>
-</header>
 <div id='home_block'>
-    Nom de l'utilisateur
-     <ul>
-         <li>Chantier 1</li>
-         <li>Chantier 2</li>
-         <li>Chantier 3</li>
-    </ul>
+    <span class="UsernameField"><?php echo $user->getUsername();?></span>
+    
+        <?php     
+    foreach ($interventions as $chantier){
+                echo '<li>'
+                    .$chantier->getName()
+                    .'<br/>'
+                    .'<span class="DateField">'.'date : '.$chantier->getIdate().'</span>'
+                    .'<br/>'
+                    .$chantier->getState()
+                    .'</li>';
+                    }
+        ?> 
+    
     <nav>
     </nav>
 </div>

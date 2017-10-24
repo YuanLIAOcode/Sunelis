@@ -11,7 +11,7 @@
 
     function createClient($db_infos,$database){
         $client = new Client();
-        $client->setId($db_infos['id']);
+        $client->setId(intval($db_infos['id']));
         $client->setUsername($db_infos['username']);
         $client->setRights($db_infos['rights']);
         $client->setCompanies($db_infos['companies']);

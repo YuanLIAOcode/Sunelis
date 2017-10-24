@@ -1,4 +1,7 @@
 <?php
+    $user = unserialize($_SESSION['user']);
+    $user->setInterventions(getInterventions($user->getid(),$database));
+    $interventions = $user->getInterventions();
     if(file_exists('view/view.css')){
         echo '<style>';
         require_once('view/view.css');

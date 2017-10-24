@@ -26,7 +26,7 @@
                     $url = 'pages/'.$_GET['url'];
                 }
             }else{
-                $url = 'pages/Mes_Chantiers/';
+                $url = 'pages/Connexion/';
             }
             if(substr($url,-1,1) != '/'){
                 $url .= '/';

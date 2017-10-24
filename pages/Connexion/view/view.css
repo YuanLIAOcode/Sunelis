@@ -1,0 +1,72 @@
+#connection_block{
+    display: block;
+    margin: auto;
+    width:300px;
+    border:solid 2px rgb(0,0,170);
+    padding: 10px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    user-select: none;
+}
+#connection_block h2{
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 30px;
+    color:black;
+    font-family: Caladea;
+    font-size:25px;
+}
+#connection_block .field{
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: Caladea;
+    color:black;
+    font-size: 18px;
+    margin-left: 25px;
+}
+#connection_block input{
+    display: block;
+    margin: auto;
+    text-align: left;
+    padding-left: 5px;
+    width: 250px;
+    font-family: Caladea;
+    font-size:16px;
+    color:black;
+    margin-bottom: 20px;
+    outline: none;
+    border:solid 1px grey;
+}
+#connection_block input:focus{
+    border:solid 1px rgb(0,0,170);
+}
+#connection_block input[type='submit']{
+    width:auto;
+    font-family: Caladea;
+    color:rgb(0,0,150);
+    background-color: white;
+    font-size:16px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border:solid 1px rgb(0,0,170);
+}
+#connection_block input[type='submit']:hover{
+    cursor: pointer;
+    background-color: rgb(0,0,170);
+    color: white;
+}
+#connection_block a{
+    display: block;
+    text-align: center;
+    font-family: Caladea;
+    color:rgb(0,0,170);
+    font-size:18px;
+    text-decoration: none;
+}
+#connection_block a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
