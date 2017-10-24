@@ -1,9 +1,6 @@
 <?php
     if(isset($_SESSION['status']) and $_SESSION['status'] == 'connected'){
         $user = unserialize($_SESSION['user']);
-        if(!isset($_SESSION['current_company'])){
-            $_SESSION['current_company'] = $user->getCompanies();
-        }
         $folder_root_path = appConf('rootpath').'globalViews/images/clients/'.$_SESSION['current_company'].'/';
         if(!isset($_GET['dir'])){
             $_SESSION['current_dir'] = '';

@@ -6,7 +6,7 @@
             document.getElementById('mydocs_block').style = 'margin-left:200px;';
         }
     }
-    document.addEventListener('resize',onresize());
+    window.addEventListener('resize',onresize);
     if(window.innerWidth < 700){
         document.getElementById('mydocs_block').style = 'margin-left:0;';
     }else{
