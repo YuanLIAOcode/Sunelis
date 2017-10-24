@@ -9,6 +9,7 @@
                 $intervention = new Intervention();
                 $intervention->setId($data['id']);
                 $intervention->setClient_id($client_id);
+                $intervention->setState($data['state']);
                 $intervention->setIdate($data['idate']);
                 $intervention->setName($data['name']);
                 $intervention->setDescription($data['description']);

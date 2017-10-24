@@ -12,6 +12,7 @@ li{
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 5%;
+    text-align: center;
 }
 nav{
     width: 30%;
@@ -19,4 +20,12 @@ nav{
 }
 header{
     background-color: gainsboro;
+}
+#home_block .UsernameField{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 20;
+}
+li .DateField{
+    text-align: right;
 }
