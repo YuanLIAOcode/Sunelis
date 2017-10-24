@@ -15,6 +15,6 @@
 </script>
 <script>
     function setBackgroundColor(element,color){
-        element.style = 'background-color:'.concat(color);
+        element.style.backgroundColor = color;
     }
 </script>

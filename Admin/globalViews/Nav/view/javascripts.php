@@ -13,3 +13,8 @@
         document.getElementById('nav_block').className = 'visible';
     }
 </script>
+<script>
+    function setLinkBorderColor(element,color){
+        element.style.borderColor = color;
+    }
+</script>

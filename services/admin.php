@@ -9,7 +9,7 @@
                 }
             }
             if(!isset($_SESSION['current_company'])){
-                $_SESSION['current_company'] = $user->getComapnies();
+                $_SESSION['current_company'] = $user->getCompanies();
             }
             $comp_infos = retrieveCompanyInfos($_SESSION['current_company']);
             define('color',$comp_infos['color']);
