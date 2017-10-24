@@ -1,0 +1,22 @@
+#mydocs_block{
+    display: block;
+    min-width: 300px;
+    user-select: none;
+}
+#mydocs_block .folder{
+    display: block;
+    width:100%;
+    border: solid 1px black;
+    text-align: left;
+    padding: 10px;
+    text-decoration: none;
+    font-family: Arial;
+    color:black;
+    font-size: 18px;
+    background-color: white;
+}
+#mydocs_block .folder:hover{
+    cursor: pointer;
+    background-color: blue;
+    color:white;
+}

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 23 Octobre 2017 à 10:17
+-- Généré le :  Lun 23 Octobre 2017 à 20:46
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -32,8 +32,10 @@ CREATE TABLE `client` (
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `token` varchar(255) NOT NULL,
-  `rights` varchar(255) NOT NULL
+  `rights` varchar(255) NOT NULL,
+  `companies` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
 
 -- --------------------------------------------------------
 
@@ -59,7 +61,7 @@ CREATE TABLE `intervention` (
   `id` int(11) NOT NULL,
   `client_id` int(11) NOT NULL,
   `state` varchar(255) NOT NULL,
-  `date` varchar(255) NOT NULL,
+  `idate` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL
@@ -95,7 +97,7 @@ ALTER TABLE `intervention`
 -- AUTO_INCREMENT pour la table `client`
 --
 ALTER TABLE `client`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT pour la table `file`
 --

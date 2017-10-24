@@ -1,0 +1,22 @@
+#home_block{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 15%;
+}
+li{
+    padding: 20px;
+    border: 1px;
+    background-color: gainsboro;
+    border-style: inset;
+    list-style: none;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+nav{
+    width: 30%;
+    background-color: orange;
+}
+header{
+    background-color: gainsboro;
+}

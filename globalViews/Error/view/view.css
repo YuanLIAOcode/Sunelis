@@ -9,17 +9,17 @@
     display: block;
     text-align: center;
     margin: 0;
-    font-family: Calibri (Sans MS);
+    font-family: Caladea;
     font-size:25px;
-    color: rgb(245,191,5);
+    color: darkblue;
 }
 #error_block h2{
     display: block;
     text-align: center;
     margin: 0;
     margin-bottom: 20px;
-    font-family: Calibri (Sans MS);
+    font-family: Caladea;
     font-size:18px;
-    color:rgb(153,1,26);
+    color:deepskyblue;
     font-style: italic;
 }
