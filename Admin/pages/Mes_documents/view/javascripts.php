@@ -13,3 +13,8 @@
         document.getElementById('mydocs_block').style = 'margin-left:200px;';
     }
 </script>
+<script>
+    function setBackgroundColor(element,color){
+        element.style = 'background-color:'.concat(color);
+    }
+</script>
