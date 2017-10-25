@@ -1,17 +1,6 @@
 <script>
-    function onresize(){
-        if(window.innerWidth < 700){
-            document.getElementById('mydocs_block').style = 'margin-left:0;';
-        }else{
-            document.getElementById('mydocs_block').style = 'margin-left:200px;';
-        }
-    }
-    window.addEventListener('resize',onresize);
-    if(window.innerWidth < 700){
-        document.getElementById('mydocs_block').style = 'margin-left:0;';
-    }else{
-        document.getElementById('mydocs_block').style = 'margin-left:200px;';
-    }
+    resizeBody(document.getElementById('mydocs_block'));
+    window.addEventListener('resize',function(){resizeBody(document.getElementById('mydocs_block'));});
 </script>
 <script>
     function setBackgroundColor(element,color){

@@ -1,8 +1,6 @@
 <nav id='nav_block' class='visible' style='background-color:<?php echo constant('color');?>;'>  
     <div id='companies'>
-        <a id='selected_company' href='Mes_documents?company=<?php echo $_SESSION['current_company'];?>'>
-            <img src='<?php echo appConf('urlrootpath').'globalViews/images/icons/'.constant('logo');?>' alt='<?php echo $_SESSION['current_company'];?>'/>
-        </a>
+        <img id='selected_company' src='<?php echo appConf('urlrootpath').'globalViews/images/icons/'.constant('logo');?>' alt='<?php echo $_SESSION['current_company'];?>'/>
     </div>
     <a class='link' onmouseout='setLinkBorderColor(this,"<?php echo constant('color');?>")' onmouseover='setLinkBorderColor(this,"white")' href='<?php echo appConf('urladminpath');?>Mes_documents' style='border-color:<?php echo constant('color').';'; if($_SESSION['page'] == 'Mes_documents'){echo 'color:'.constant('color').';background-color:white;';}?>'>Mes Documents</a>
     <a class='link' onmouseout='setLinkBorderColor(this,"<?php echo constant('color');?>")' onmouseover='setLinkBorderColor(this,"white")' href='<?php echo appConf('urladminpath');?>Agenda' style='border-color:<?php echo constant('color').';'; if($_SESSION['page'] == 'Agenda'){echo 'color:'.constant('color').';background-color:white;';}?>'>Mon agenda</a>

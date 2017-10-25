@@ -1,12 +1,67 @@
-header{
+#horizontal_header{
     background-color: none;
-    position: absolute;
+    position: fixed;
     top:5px;
     right: 5px;
     height: 30px;
     width:30px;
 }
-header img{
+#horizontal_header img{
     height: 30px;
     width:30px;
+}
+#vertical_header{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:50px;
+    overflow: hidden;
+    min-width: 1000px;
+}
+#vertical_header #companies{
+    display: inline-block;
+    height: 100%;
+}
+#vertical_header #companies #selected_company{
+    height: 100%;
+}
+#vertical_header #links{
+    display: inline-block;
+    position: absolute;
+    top:12px;
+    height: 75%;
+    border: none;
+}
+#vertical_header .link{
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border:solid 1px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: Caladea;
+    font-size: 18px;
+    color:white;
+}
+#vertical_header .power_link{
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border:solid 1px;
+    border-radius: 10px;
+    height: 22px;
+    vertical-align: top;
+    color:white;
+}
+#vertical_header .power_link img{
+    height: 100%;
 }

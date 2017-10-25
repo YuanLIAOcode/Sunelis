@@ -2,6 +2,14 @@
     if(isset($_SESSION['status']) and $_SESSION['status'] == 'connected'){
         $user = unserialize($_SESSION['user']);
         if($user->getRights() == 'Admin'){
+            if(isset($_POST['submit']) and $_SESSION['page'] == 'Comptes_admin' and $_POST['submit'] == 'Ajouter'){
+                if($_POST['username'] != '' and $_POST['email'] != '' and isset($_POST['rihghts'])){
+                    //add admin
+                }else{
+                    array_push($_SESSION['errors'],'Un ou plusieurs champs n\'ont pas été remplis');
+                    displaySessionLogs();
+                }
+            }
             $admin_accounts = getAdminAccounts($database,$_SESSION['current_company']);
             $_SESSION['page'] = 'Comptes_admin';
             if(file_exists('view/view.css')){
