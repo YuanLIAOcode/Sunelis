@@ -1,4 +1,9 @@
 <?php 
+    if($user->getRights() == 'admin'){
+        $companies_access = array('SUNELIS','ISOLAVIE','NORD SOLUTIONS TOITURE');   
+    }else{
+        $companies_access = explode(';',$user->getCompanies());
+    }
     if(file_exists('view/view.css')){
         echo '<style>';
         require_once('view/view.css');

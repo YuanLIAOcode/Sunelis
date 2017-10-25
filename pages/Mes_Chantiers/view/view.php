@@ -3,7 +3,7 @@
     <span class="UsernameField"><?php echo $user->getUsername();?></span>
     
         <?php     
-    foreach ($interventions as $chantier){
+    foreach ($newInterventions as $chantier){
                 echo '<li>'
                     .$chantier->getName()
                     .'<br/>'

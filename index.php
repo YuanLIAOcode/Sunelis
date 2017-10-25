@@ -50,9 +50,11 @@
                 $_GET['url'] = $url;
                 require_once('index.php');
             }else{
+                
                 if(file_exists($url.'controller.php')){
                     chdir(appConf('rootpath').$url);
                     require_once('controller.php');
+                    if(!is_int(strpos($url,'Connexion')) and !isset($_GET['err_code'])){
                     if($url != 'globalViews/Error/'){
                         chdir(appConf('rootpath'));
                         if(file_exists('globalViews/Header/controller.php')){
@@ -69,7 +71,7 @@
                             chdir(appConf('rootpath').'globalViews/Footer/');
                             require_once('controller.php');
                         }
-                    }
+                    }}
                 }else{
                     $url = 'globalViews/Error/';
                     $_GET = array('err_code'=>500);

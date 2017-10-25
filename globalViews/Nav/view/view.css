@@ -1,3 +1,39 @@
 #nav_block{
-    
+    width:200px;
+    position: fixed;
+    left:0;
+    top:0;
+    height: 100%;
+    z-index: 1;
+}
+#nav_block #companies{
+
+}
+#nav_block #companies #selected_company{
+    width: 100%;
+}
+#nav_block #companies #selected_company img{
+    width: 100%;
+}
+#nav_block #companies #unselected_company{
+    width: 100%;
+}
+#nav_block #companies #unselected_company img{
+    width: 100%;
+}
+#nav_block .link{
+    display: block;
+    border:solid 1px;
+    text-align: left;
+    margin-left: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: none;
+    font-family: Caladea;
+    font-size: 18px;
+    color:white;
+    text-decoration: none;
 }

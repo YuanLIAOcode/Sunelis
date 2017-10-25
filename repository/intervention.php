@@ -20,5 +20,57 @@
             return $interventions;
         }
         return array();
+    } 
+
+    function orderInterventions($interventions){
+        //$newInterventions = array();
+       /* foreach($interventions as $intervention1){
+            foreach($interventions as $intervention2)
+                if ($intervention1 != $intervention2){
+                    if (transformationDate($intervention1) < transformationDate($intervention2)){
+                        echo $intervention1->getName().' est postérieure ';
+                        $intervention=new Intervention();
+                        copyIntervention($intervention,$intervention2);
+                        copyIntervention($intervention2,$intervention1);
+                        copyIntervention($intervention1,$intervention);
+                        echo $intervention1->getName().' a été replacé ';
+                    }
+                }
+            array_push($newInterventions,$intervention1);   
+        }*/
+        $taille = count($interventions); 
+            for($i = 0; $i < $taille-1; $i++) { 
+                for($j = $taille-2; $j >= $i; $j--) { 
+                    if(transformationDate($interventions[$j+1]) <transformationDate( $interventions[$j])) { 
+                        $temp = $interventions[$j+1]; 
+                        $interventions[$j+1] = $interventions[$j]; 
+                        $interventions[$j] = $temp; 
+                }
+            } 
+        } 
+        return $interventions;
+    }
+    
+    function copyIntervention($intervention1,$intervention2){
+                $intervention1->setId($intervention2->getId());
+                $intervention1->setClient_id($intervention2->getClient_Id());
+                $intervention1->setState($intervention2->getState());
+                $intervention1->setIdate($intervention2->getIdate());
+                $intervention1->setName($intervention2->getName());
+                $intervention1->setDescription($intervention2->getDescription());
+                $intervention1->setAddress($intervention2->getAddress());
+                $intervention1->setFiles($intervention2->getFiles());
+    }
+    function transformationDate($Intervention){
+        $Date =$Intervention->getIdate();
+        $newDate='';
+        if (strlen($Date)==10){
+            $newDate=substr($Date,6,4).substr($Date,3, 2).substr($Date,0,2);
+        }
+        else{
+            echo 'error in intervention date format';
+        }
+        var_dump($newDate);
+        return $newDate;
     }
 ?>
