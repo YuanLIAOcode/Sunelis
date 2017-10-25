@@ -23,21 +23,6 @@
     } 
 
     function orderInterventions($interventions){
-        //$newInterventions = array();
-       /* foreach($interventions as $intervention1){
-            foreach($interventions as $intervention2)
-                if ($intervention1 != $intervention2){
-                    if (transformationDate($intervention1) < transformationDate($intervention2)){
-                        echo $intervention1->getName().' est postérieure ';
-                        $intervention=new Intervention();
-                        copyIntervention($intervention,$intervention2);
-                        copyIntervention($intervention2,$intervention1);
-                        copyIntervention($intervention1,$intervention);
-                        echo $intervention1->getName().' a été replacé ';
-                    }
-                }
-            array_push($newInterventions,$intervention1);   
-        }*/
         $taille = count($interventions); 
             for($i = 0; $i < $taille-1; $i++) { 
                 for($j = $taille-2; $j >= $i; $j--) { 
