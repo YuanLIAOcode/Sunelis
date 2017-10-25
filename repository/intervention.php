@@ -70,7 +70,6 @@
         else{
             echo 'error in intervention date format';
         }
-        var_dump($newDate);
         return $newDate;
     }
 ?>
