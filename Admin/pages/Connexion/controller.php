@@ -1,7 +1,10 @@
 <?php
+    if(isset($_GET['stat']) and $_GET['stat'] == 'disc'){
+        unset($_SESSION['status']);
+    }
     if(isset($_POST['submit']) and $_SESSION['page'] == 'Connexion'){
         if($_POST['username'] != '' and $_POST['password'] != ''){
-            if($user = verifyLogin($_POST['username'],$_POST['password'],$database)){
+            if($user = verifyLogin($_POST['username'],$_POST['password'],$database,$rights=array('admin'))){
                 $_SESSION['status'] = 'connected';
                 $_SESSION['user'] = serialize($user);
                 header('Location: '.appConf('urladminpath').'Mes_documents');

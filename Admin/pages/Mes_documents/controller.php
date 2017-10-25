@@ -26,5 +26,8 @@
         if(file_exists('view/javascripts.php')){
             require_once('view/javascripts.php');
         }
+    }else{
+        header('Location: '.appConf('urlrootpath').'Error?err_code=404');
+        exit(1);
     }
 ?>

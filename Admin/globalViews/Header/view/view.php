@@ -1,3 +1,3 @@
 <header>
-    
+    <a href='<?php echo appConf('urladminpath');?>Connexion?stat=disc'><img onmouseout='setPowerImageSrc(this,"<?php echo appConf('urlrootpath');?>globalViews/images/icons/<?php echo constant('power_r_button');?>")' onmouseover='setPowerImageSrc(this,"<?php echo appConf('urlrootpath');?>globalViews/images/icons/<?php echo constant('power_button');?>")' src='<?php echo appConf('urlrootpath');?>globalViews/images/icons/<?php echo constant('power_r_button');?>'/></a>
 </header>

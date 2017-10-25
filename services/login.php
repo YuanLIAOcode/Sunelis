@@ -1,6 +1,14 @@
 <?php
-    function verifyLogin($username,$password,$database){
-        $sql = 'SELECT * FROM client WHERE username=:username AND password=:password;';
+    function verifyLogin($username,$password,$database,$rights=array()){
+        $sql = 'SELECT * FROM client WHERE username=:username AND password=:password';
+        if($rights != array()){
+            $sql .= ' AND ';
+            foreach($rights as $right){
+                $sql .= 'rights = "'.$right.'" OR ';
+            }
+            $sql = substr($sql,0,strlen($sql)-3).';';
+        }
+        var_dump($sql);
         $params = array('username'=>$username,'password'=>hash('sha256',$password));
         $datas = $database->query($sql,$params);
         if($datas){

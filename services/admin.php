@@ -14,6 +14,8 @@
             $comp_infos = retrieveCompanyInfos($_SESSION['current_company']);
             define('color',$comp_infos['color']);
             define('logo',$comp_infos['logo']);
+            define('power_button',$comp_infos['power_button']);
+            define('power_r_button',$comp_infos['power_r_button']);
         }
     }
 
@@ -27,6 +29,6 @@
             }
             $i += 1;
         }
-        return(array('color'=>appConf('comp'.$i.'_color'),'logo'=>appConf('comp'.$i.'_logo')));
+        return(array('color'=>appConf('comp'.$i.'_color'),'logo'=>appConf('comp'.$i.'_logo'),'power_button'=>appConf('comp'.$i.'_power_button'),'power_r_button'=>appConf('comp'.$i.'_power_r_button')));
     }
 ?>
