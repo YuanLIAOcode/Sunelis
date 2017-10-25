@@ -1,3 +1,12 @@
-header{
-    
+#horizontal_header{
+    background-color: none;
+    position: fixed;
+    top:5px;
+    right: 5px;
+    height: 30px;
+    width:30px;
+}
+#horizontal_header img{
+    height: 30px;
+    width:30px;
 }

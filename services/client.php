@@ -14,6 +14,8 @@
             $comp_infos = retrieveCompanyInfos($_SESSION['current_company']);
             define('color',$comp_infos['color']);
             define('logo',$comp_infos['logo']);
+            define('power_button',$comp_infos['power_button']);
+            define('power_r_button',$comp_infos['power_r_button']);
         }
     }
 ?>
