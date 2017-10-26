@@ -7,12 +7,9 @@
     z-index: 1;
 }
 #nav_block #companies{
-
-}
-#nav_block #companies #selected_company{
     width: 100%;
 }
-#nav_block #companies #selected_company img{
+#nav_block #companies #selected_company{
     width: 100%;
 }
 #nav_block #companies #unselected_company{

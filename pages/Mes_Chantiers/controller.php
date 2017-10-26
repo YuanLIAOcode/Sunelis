@@ -1,5 +1,4 @@
 <?php
-    initClientVariables();
     $user = unserialize($_SESSION['user']);
     $user->setInterventions(getInterventions($user->getid(),$database));
     $interventions = $user->getInterventions();
