@@ -1,0 +1,25 @@
+#home_block{
+    margin-left: 20%;
+    margin-right: 30%;
+}
+li{
+    list-style: none;
+    margin-top: 5%;
+    font-size:20;
+
+}
+nav{
+    width: 30%;
+    background-color: orange;
+}
+header{
+    background-color: gainsboro;
+}
+#home_block .UsernameField{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 30;
+    text-align: center;
+    margin: auto;
+}
+

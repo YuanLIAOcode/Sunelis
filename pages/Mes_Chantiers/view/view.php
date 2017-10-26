@@ -1,21 +1,23 @@
 <title></title>
 <div id='home_block'>
     <span class="UsernameField"><?php echo $user->getUsername();?></span>
-    
-        <?php     
-    foreach ($newInterventions as $chantier){
-                echo '<li>'
-                    .$chantier->getName()
-                    .'<br/>'
-                    .'<span class="DateField">'.'date : '.$chantier->getIdate().'</span>'
-                    .'<br/>'
-                    .$chantier->getState()
-                    .'</li>';
-                    }
-        ?> 
-    
-    <nav>
-    </nav>
+
+
+    <ul>
+        <?php foreach ($newInterventions as $chantier){?>
+        <li>
+            <a href="<?php echo appConf("rootpath")."Mon_Chantier"; ?>">
+                <?php echo $chantier->getName()?>
+                <br/>
+                <span class="DateField"> <?php echo $chantier->getIdate()?> </span>
+                <br/>
+                <?php echo $chantier->getState()?>
+            </a>
+        </li>
+        <?php }?>
+    </ul>
+
+
 </div>
 <footer>
 </footer>

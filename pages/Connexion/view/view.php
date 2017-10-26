@@ -7,5 +7,5 @@
         <input type='password' name='password' spellcheck="false"/>
         <input type='submit' name='submit' value="Se connecter"/>
     </form>
-    <a href='<?php echo appConf('urladminpath');?>Forgotten_password_step1'>Mot de passe oublié ?</a>
+    <a href='<?php echo appConf('urlrootpath');?>Forgotten_password_step1'>Mot de passe oublié ?</a>
 </div>
