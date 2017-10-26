@@ -50,8 +50,8 @@
                 $_GET['url'] = $url;
                 require_once('index.php');
             }else{
-                
                 if(file_exists($url.'controller.php')){
+                    initClientVariables();
                     chdir(appConf('rootpath').$url);
                     require_once('controller.php');
                     if(!is_int(strpos($url,'Connexion')) and !isset($_GET['err_code'])){
