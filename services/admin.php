@@ -1,14 +1,14 @@
 <?php
-    function initAdminVariables(){
+    function initAdminVariables($database){
         if(isset($_SESSION['user'])){
             $user = unserialize($_SESSION['user']);
+            $user = getUser($user->getId(),$database);
             $companies = getSeveralAppConf('comp');
             if(isset($_GET['company']) and in_array($_GET['company'],$companies)){
                 if($user->getRights() == 'admin'){
                        $_SESSION['current_company'] = $_GET['company'];
                 }
-            }
-            if(!isset($_SESSION['current_company'])){
+            }else{
                 $_SESSION['current_company'] = $user->getCompanies();
             }
             $comp_infos = retrieveCompanyInfos($_SESSION['current_company']);

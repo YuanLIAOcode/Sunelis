@@ -16,4 +16,14 @@
         }
         return $accounts;
     }
+
+    function getUser($user_id,$database){
+        $sql = 'SELECT * FROM client WHERE id=:id;';
+        $params = array('id'=>$user_id);
+        $datas = $database->query($sql,$params);
+        if($datas){
+            return createClient($datas[0],$database);
+        }
+        return null;
+    }
 ?>

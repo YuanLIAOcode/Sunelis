@@ -1,13 +1,25 @@
+<?php
+include_once('services/session.php');
+sessionInit();
+include_once('services/includeGlobals.php');
+includeGlobals();
+chdir(appConf('rootpath'));
+?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
-    <?php
-    include_once('services/session.php');
-    sessionInit();
-    include_once('services/includeGlobals.php');
-    includeGlobals();
-    chdir(appConf('rootpath'));
-    ?>
+    <<<<<<< HEAD
+               <?php
+               include_once('services/session.php');
+               sessionInit();
+               include_once('services/includeGlobals.php');
+               includeGlobals();
+               chdir(appConf('rootpath'));
+               ?>
+               <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    =======
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        >>>>>>> efb07ae9fe1df053476787151068f581811c7dd4
         <link rel="icon" type="image/jpg" href="<?php echo appConf('urlrootpath');?>globalViews/images/icons/lock.png">
     </head>
     <body>
@@ -76,6 +88,7 @@
                 $url = 'globalViews/Error/';
                 $_GET = array('err_code'=>500);
                 require_once($url.'controller.php');
+
             }
         }
         ?>

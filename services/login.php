@@ -8,7 +8,6 @@
             }
             $sql = substr($sql,0,strlen($sql)-3).';';
         }
-        var_dump($sql);
         $params = array('username'=>$username,'password'=>hash('sha256',$password));
         $datas = $database->query($sql,$params);
         if($datas){
