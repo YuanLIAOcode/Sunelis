@@ -18,7 +18,6 @@ if(isset($_SESSION['user'])){
     }
 
 }
-}
 if(file_exists('view/view.css')){
     echo '<style>';
     require_once('view/view.css');
