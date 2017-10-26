@@ -6,7 +6,7 @@
     <ul>
         <?php foreach ($newInterventions as $chantier){?>
         <li>
-            <a href="<?php echo appConf("rootpath")."Mon_Chantier"; ?>">
+            <a href="<?php echo appConf("urlrootpath")."Mon_Chantier"; ?>">
                 <?php echo $chantier->getName()?>
                 <br/>
                 <span class="DateField"> <?php echo $chantier->getIdate()?> </span>
