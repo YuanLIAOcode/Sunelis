@@ -1,11 +1,11 @@
+ <?php
+    include_once('services/session.php');
+    sessionInit();
+    include_once('services/includeGlobals.php');
+    includeGlobals();
+    chdir(appConf('rootpath'));
+?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
-    <?php
-        include_once('services/session.php');
-        sessionInit();
-        include_once('services/includeGlobals.php');
-        includeGlobals();
-        chdir(appConf('rootpath'));
-    ?>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="icon" type="image/jpg" href="<?php echo appConf('urlrootpath');?>globalViews/images/icons/lock.png">
@@ -50,28 +50,28 @@
                 $_GET['url'] = $url;
                 require_once('index.php');
             }else{
-                
                 if(file_exists($url.'controller.php')){
                     chdir(appConf('rootpath').$url);
                     require_once('controller.php');
                     if(!is_int(strpos($url,'Connexion')) and !isset($_GET['err_code'])){
-                    if($url != 'globalViews/Error/'){
-                        chdir(appConf('rootpath'));
-                        if(file_exists('globalViews/Header/controller.php')){
-                            chdir(appConf('rootpath').'globalViews/Header/');
-                            require_once('controller.php');
+                        if($url != 'globalViews/Error/'){
+                            chdir(appConf('rootpath'));
+                            if(file_exists('globalViews/Header/controller.php')){
+                                chdir(appConf('rootpath').'globalViews/Header/');
+                                require_once('controller.php');
+                            }
+                            chdir(appConf('rootpath'));
+                            if(file_exists('globalViews/Nav/controller.php')){
+                                chdir(appConf('rootpath').'globalViews/Nav/');
+                                require_once('controller.php');
+                            }   
+                            chdir(appConf('rootpath'));
+                            if(file_exists('globalViews/Footer/controller.php')){
+                                chdir(appConf('rootpath').'globalViews/Footer/');
+                                require_once('controller.php');
+                            }
                         }
-                        chdir(appConf('rootpath'));
-                        if(file_exists('globalViews/Nav/controller.php')){
-                            chdir(appConf('rootpath').'globalViews/Nav/');
-                            require_once('controller.php');
-                        }   
-                        chdir(appConf('rootpath'));
-                        if(file_exists('globalViews/Footer/controller.php')){
-                            chdir(appConf('rootpath').'globalViews/Footer/');
-                            require_once('controller.php');
-                        }
-                    }}
+                    }
                 }else{
                     $url = 'globalViews/Error/';
                     $_GET = array('err_code'=>500);
