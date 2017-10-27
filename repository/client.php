@@ -17,6 +17,24 @@
         return $accounts;
     }
 
+    function getClientAccounts($database,$company){
+        $accounts = array();
+        $sql = 'SELECT * FROM client WHERE (rights="Professionnel" OR rights="Particulier") AND companies=:companies;';
+        $params = array('companies'=>$company);
+        $datas = $database->query($sql,$params);
+        if($datas){
+            foreach($datas as $data){
+                $client = new Client();
+                $client->setId(intval($data['id']));
+                $client->setUsername($data['username']);
+                $client->setEmail($data['email']);
+                $client->setRights($data['rights']);
+                array_push($accounts,$client);
+            }
+        }
+        return $accounts;
+    }
+
     function getUser($user_id,$database){
         $sql = 'SELECT * FROM client WHERE id=:id;';
         $params = array('id'=>$user_id);

@@ -9,7 +9,9 @@
                         <?php echo $file;?>
                     </a><?php
                 }else if(is_file($folder_root_path.$_SESSION['current_dir'].$file)){
-                    
+                    var_dump($file);
+                    $ext = getExtension($file);
+                    var_dump(isImage($file));
                 }else{
                     
                 }

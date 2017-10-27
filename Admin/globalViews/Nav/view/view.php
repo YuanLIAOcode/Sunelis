@@ -2,10 +2,10 @@
     <div id='companies'>
         <img id='selected_company' src='<?php echo appConf('urlrootpath').'globalViews/images/icons/'.constant('logo');?>' alt='<?php echo $_SESSION['current_company'];?>'/>
         <div id='unselected_companies'>
-            <?php
+            <?php /*
                 foreach($unselected_companies as $company){?>
                     <a href='<?php echo appConf('urladminpath').'Mes_documents?company='.$company;?>'><img src='<?php echo appConf('urlrootpath').'globalViews/images/icons/'.retrieveCompanyInfos($company)['logo'];?>'/></a><?php      
-                }
+                }*/
             ?>
         </div>
     </div>
