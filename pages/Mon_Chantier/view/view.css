@@ -22,4 +22,48 @@ header{
     text-align: center;
     margin: auto;
 }
+#files_block{
+    display: block;
+    min-width: 300px;
+    user-select: none;
+    padding: 5px;
+    margin-bottom: 100px;
+    margin-top: 15px;
+}
+#files_block .file{
+    display: block;
+    text-align: left;
+    padding: 10px;
+    padding-top: 5px;
+    height: 18px;
+    text-decoration: none;
+    font-family: Caladea;
+    color:black;
+    font-size: 18px;
+    margin-right: 50px;
+}
+#files_block .folder{
+    display: block;
+    text-align: left;
+    padding: 10px;
+    padding-top: 5px;
+    height: 18px;
+    text-decoration: none;
+    font-family: Caladea;
+    color:black;
+    font-size: 18px;
+    margin-right: 50px;
+}
+#files_block .folder img{
+    height: 100%;
+    margin-right: 10px;
+    position: relative;
+    top:3px;
+}
+#files_block .folder:hover{
+    cursor: pointer;
+}
+#files_block .folder:hover{
+    color:rebeccapurple;
+}
 
