@@ -42,6 +42,12 @@ header{
     font-size: 18px;
     margin-right: 50px;
 }
+#files_block .file img{
+    height: 100%;
+    margin-right: 10px;
+    position: relative;
+    top:3px;
+}
 #files_block .folder{
     display: block;
     text-align: left;

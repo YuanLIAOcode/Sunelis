@@ -6,7 +6,7 @@
     echo '<li>'.'<span class="NameField">'.'Chantier : '.$intervention->getName().'</span>'.'</li>'
         .'<li>'.'<span class="DateField">'.'Date : '.$intervention->getIdate().'</span>'.'</li>'
         .'<li>'.'<span class="AddressField">'.'Lieu : '.$intervention->getAddress().'</span>'.'</li>';
-    ?> 
+    if(isset($files)){?> 
     <div id='files_block'>
         <?php
             foreach($dir as $file){
@@ -19,8 +19,16 @@
                     }else if(is_file($folder_root_path.$_SESSION['current_dir'].$file)){
                         foreach($files as $datafile){
                             if ($datafile->getFilepath()==$_SESSION['current_dir'] and $datafile->getVisibility()==1
-                                and $file == $datafile->getFilename()){
-                                echo '<span class="file">'.$file.'</span>';
+                                and $file == $datafile->getFilename()){?>
+                                <span class="file"><?php
+                                if(isImage($file)){?>
+                                    <img src='<?php echo appConf('urlrootpath');?>globalViews/images/icons/jpgFile.jpg' alt='folder :'/><?php
+                                }
+                                else if (isTextFile($file)){?>
+                                    <img src='<?php echo appConf('urlrootpath');?>globalViews/images/icons/txtFile.jpg' alt='folder :'/><?php
+                                }
+                                echo $file;?>
+                                </span><?php
                             }
                         }
                             
@@ -29,7 +37,7 @@
                     }
                 }
             }
-        ?>
+    }?>
     </div>
 
 </div>
