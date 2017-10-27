@@ -3,8 +3,9 @@
     <span class="UsernameField"><?php echo $user->getUsername();?></span>
     
         <?php     
-                echo '<li>'.'<span class="DateField">'.'date : '.$chantier->getIdate().'</span>'.'</li>'
-                    .'<li>'.'<span class="AddressField">'.'Lieu : '.$chantier->getAddress().'</span>'.'</li>';
+                echo '<li>'.'<span class="NameField">'.'Chantier : '.$intervention->getName().'</span>'.'</li>'
+                    .'<li>'.'<span class="DateField">'.'Date : '.$intervention->getIdate().'</span>'.'</li>'
+                    .'<li>'.'<span class="AddressField">'.'Lieu : '.$intervention->getAddress().'</span>'.'</li>';
                     
         ?> 
     

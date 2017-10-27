@@ -7,7 +7,7 @@
             $interventions = array();
             foreach($datas as $data){
                 $intervention = new Intervention();
-                $intervention->setId($data['id']);
+                $intervention->setId((int)$data['id']);
                 $intervention->setClient_id($client_id);
                 $intervention->setState($data['state']);
                 $intervention->setIdate($data['idate']);
