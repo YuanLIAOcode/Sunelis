@@ -1,5 +1,5 @@
 <?php 
-    if(isset($_SESSION['status']) and $_SESSION['status'] == 'connected'){
+    if(isset($_SESSION['admin_status']) and $_SESSION['admin_status'] == 'connected'){
         if($user->getRights() == 'admin'){
             $companies_access = array('SUNELIS','ISOLAVIE','NORD SOLUTIONS TOITURE');   
         }else{

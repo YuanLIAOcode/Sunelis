@@ -25,6 +25,7 @@
                         <select name='rights'>
                             <option selected disabled>Droits</option>
                             <option value='Admin'>Admin</option>
+                            <option value='Employé'>Employé</option>
                         </select>
                     </td>
                     <td><input onmouseout='setColor(this,"<?php echo constant('color');?>");setBackgroundColor(this,"white")' onmouseover='setColor(this,"white");setBackgroundColor(this,"<?php echo constant('color');?>")' type='submit' name='submit' value='Ajouter' style='color:<?php echo constant('color');?>;background-color:white;border:solid 1px <?php echo constant('color');?>'/></td>

@@ -1,5 +1,5 @@
 <?php
-    if(isset($_SESSION['status']) and $_SESSION['status'] == 'connected'){
+    if(isset($_SESSION['admin_status']) and $_SESSION['admin_status'] == 'connected'){
         if(file_exists('Mes_documents/controller.php')){
             header('Location: '.appConf('urladminpath').'Mes_documents');
             exit(1);
