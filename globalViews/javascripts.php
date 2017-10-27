@@ -6,7 +6,7 @@
             element.style.minWidth = '1000px';
         }else{
             element.style.marginLeft = '200px';
-            element.style.paddingTop = '0px';
+            element.style.paddingTop = '80px';
             element.style.minWidth = '0px';
         }
     }

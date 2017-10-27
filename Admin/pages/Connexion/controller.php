@@ -1,6 +1,7 @@
 <?php
     if(isset($_GET['stat']) and $_GET['stat'] == 'disc'){
         unset($_SESSION['admin_status']);
+        unset($_SESSION['current_company']);
     }
     if(isset($_POST['submit']) and $_SESSION['page'] == 'Connexion'){
         if($_POST['username'] != '' and $_POST['password'] != ''){

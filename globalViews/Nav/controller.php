@@ -1,5 +1,5 @@
 <?php 
-    if($user->getRights() == 'admin'){
+    if($user->getRights() == 'Admin'){
         $companies_access = array('SUNELIS','ISOLAVIE','NORD SOLUTIONS TOITURE');   
     }else{
         $companies_access = explode(';',$user->getCompanies());
