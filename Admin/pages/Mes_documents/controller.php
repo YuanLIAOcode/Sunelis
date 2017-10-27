@@ -1,5 +1,5 @@
 <?php
-    if(isset($_SESSION['status']) and $_SESSION['status'] == 'connected'){
+    if(isset($_SESSION['admin_status']) and $_SESSION['admin_status'] == 'connected'){
         $user = unserialize($_SESSION['user']);
         $folder_root_path = appConf('rootpath').'globalViews/images/clients/'.$_SESSION['current_company'].'/';
         if(!isset($_GET['dir'])){
@@ -27,7 +27,7 @@
             require_once('view/javascripts.php');
         }
     }else{
-        header('Location: '.appConf('urlrootpath').'Error?err_code=404');
+        header('Location: '.appConf('urladminpath').'Connexion');
         exit(1);
     }
 ?>

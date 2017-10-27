@@ -1,15 +1,16 @@
 #horizontal_header{
-    background-color: none;
+    background-color: white;
     position: fixed;
-    top:5px;
-    right: 5px;
-    height: 30px;
-    width:30px;
+    top:0px;
+    height: 75px;
+    width:100%;
 }
 #horizontal_header img{
     height: 30px;
     width:30px;
     background-color: white;
+    float: right;
+    margin:5px;
 }
 #vertical_header{
     position: absolute;

@@ -7,16 +7,11 @@
     z-index: 1;
 }
 #nav_block #companies{
-
+    position: absolute;
 }
 #nav_block #companies #selected_company{
     width: 100%;
-}
-#nav_block #companies #unselected_company{
-    width: 100%;
-}
-#nav_block #companies #unselected_company img{
-    width: 100%;
+    height: 75px;
 }
 #nav_block .link{
     display: block;
@@ -33,4 +28,18 @@
     font-size: 18px;
     color:white;
     text-decoration: none;
+}
+#nav_block #unselected_companies{
+    display: block;
+    position: absolute;
+    top:0;
+    left:100%;
+    height: 100%;
+    width:500px;
+}
+#nav_block #unselected_companies a{
+    display: inline;
+}
+#nav_block #unselected_companies img{
+    height: 100%;
 }

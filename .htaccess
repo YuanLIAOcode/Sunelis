@@ -2,5 +2,5 @@ RewriteEngine On
 
 RewriteRule ^.htaccess$ globalViews/Error/controller.php?err_code=404 [L]
 RewriteRule ^app.conf$ globalViews/Error/controller.php?err_code=404 [L]
+RewriteRule ^Error=([0-9]{3})$ globalViews/Error/controller.php?err_code=$1 [L]
 RewriteRule ^([\/]{0,1}([a-zA-Z0-9_]+[\/]{0,1})+)$ index.php?url=$1 [L,QSA]
-#RewriteRule ^([a-zA-Z0-9.\/]*)$ globalViews/Error/controller.php?err_code=404 [L]
