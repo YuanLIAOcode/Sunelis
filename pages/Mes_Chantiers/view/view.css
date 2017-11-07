@@ -1,24 +1,28 @@
 #home_block{
-    margin-left: 30%;
+    margin-left: 20%;
     margin-right: 30%;
     padding-top: 60px;
 }
 li{
-    padding: 20px;
-    border: 1px;
+
     background-color: gainsboro;
-    border-style: inset;
     list-style: none;
-    margin-left: 5%;
-    margin-right: 5%;
     margin-top: 5%;
-    text-align: center;
+ 
 }
 li a{
     color: black;
     text-decoration: none;
+    text-align: center;
+  
 }
-
+li .DateField{
+    text-align: right;
+}
+li .NameField{
+    text-align: center;
+    font-size:20px;    
+}
 nav{
     width: 30%;
     background-color: orange;
@@ -31,6 +35,4 @@ header{
     font-weight: bold;
     font-size: 20;
 }
-li .DateField{
-    text-align: right;
-}
+

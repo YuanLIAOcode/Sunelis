@@ -23,7 +23,6 @@ if(isset($_SESSION['status'])and $_SESSION['status'] == 'connected'){
         }
         $intervention = unserialize($_SESSION['chantier']);
         $files = $intervention->getFiles();
-
         $folder_root_path = appConf('rootpath').'globalViews/images/clients/'.$_SESSION['current_company'].'/';
         if(!isset($_GET['dir'])){
             $_SESSION['current_dir'] = '';

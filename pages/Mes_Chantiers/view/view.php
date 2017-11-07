@@ -5,13 +5,14 @@
 
     <ul>
         <?php foreach ($newInterventions as $chantier){?>
-        <li>
-            <a href="<?php echo appConf("urlrootpath")."Mon_Chantier?id=".$chantier->getId(); ?>">
-                <?php echo $chantier->getName()?>
-                <br/>
+        <li onmouseout='setLinkBackgroundColor(this,"gainsboro")' 
+               onmouseover='setLinkBackgroundColor(this,"<?php echo constant('color');?>")'>
+            <a href="<?php echo appConf("urlrootpath")."Mon_Chantier?id=".$chantier->getId(); ?>" >
+                <span class="NameField"><?php echo $chantier->getName()?></span>
+                <br/><br/>
                 <span class="DateField"> <?php echo $chantier->getIdate()?> </span>
                 <br/>
-                <?php echo $chantier->getState()?>
+                <?php echo 'Statut : '.$chantier->getState()?>
             </a>
         </li>
         <?php }?>
